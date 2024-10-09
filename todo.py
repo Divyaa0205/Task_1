@@ -9,4 +9,11 @@ class ToDoList:
         task = {"title":title,"completed":False}
         self.tasks.append(task)
 
+    def complete_task(self,task_id):
+        if 0 <= task_id < len(self.tasks):
+            self.tasks[task_id]['Completed'] = True
+
+    def delete_task(self, task_id):
+        if 0 <= task_id < len(self.tasks):
+            self.tasks.pop(task_id)
 
